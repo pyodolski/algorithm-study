@@ -1,5 +1,4 @@
-package chap1;
-
+package src.chap1;
 public class Selection extends AbstractSort {
     public static void sort(Comparable[] a) {
         int N = a.length;

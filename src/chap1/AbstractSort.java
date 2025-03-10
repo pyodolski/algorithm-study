@@ -1,4 +1,4 @@
-package chap1;
+package src.chap1;
 public abstract class AbstractSort {
     public static void sort(Comparable[] a) {};
 

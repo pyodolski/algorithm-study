@@ -1,5 +1,4 @@
-package chap1;
-
+package src.chap1;
 public class Counting {
     public static int[] sort(int[] A, int K) {
         int i, N = A.length;
