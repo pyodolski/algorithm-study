@@ -63,6 +63,7 @@ public class BST <K extends Comparable<K>, V> {
     }
     public Iterable<K> keys() {
         if (root == null) return null;
+        Node<K,V> x = root;
         ArrayList<K> keylist = new ArrayList<K>(size(x.left));
         inorder(root,keylist);
         return keylist;
