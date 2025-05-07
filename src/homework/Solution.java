@@ -3,21 +3,24 @@ class Solution {
     int first = 0;
     int secend = 0;
 
-    public int[] soulution(int [][] arr) {
+    public int[] solution(int[][] arr) {
         int n = arr.length;
         cmpr(arr, 0, 0, n);
-        return new int[]{first, secend};
+        int[] answer = {first, secend};
+        return answer;
     }
+
     private void cmpr(int[][] arr, int x, int y, int n) {
         if (samecheck(arr, x, y, n)) {
             if (arr[x][y] == 0) first++;
             else secend++;
             return;
         }
-        cmpr(arr, x, y, n/2);
-        cmpr(arr, x + n/2, y, n/2);
-        cmpr(arr, x, y + n/2, n/2);
-        cmpr(arr, x + n/2, y + n/2, n/2);
+        int half = n / 2;
+        cmpr(arr, x, y, half);
+        cmpr(arr, x + half, y, half);
+        cmpr(arr, x, y + half, half);
+        cmpr(arr, x + half, y + half, half);
     }
 
     private boolean samecheck(int[][] arr, int x, int y, int n) {
